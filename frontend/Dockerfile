@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:1.27.4-alpine-slim
 RUN rm -rf /usr/share/nginx/html/index.html
 RUN rm -rf /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/nginx.conf
