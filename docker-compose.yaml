@@ -18,7 +18,7 @@ services:
   # docker run -d --name mysql --network expense -v mysql:/var/lib/mysql backend:1.0.0
   mysql:
     image: mysql:1.0.0
-    command: sh -c "sleep 5 && node /opt/backend/idex.js"
+    command: sh -c "sleep 5 && node /opt/backend/index.js"
     networks:
       - expense
     container_name:  mysql
