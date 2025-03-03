@@ -8,7 +8,7 @@ volumes:
 services:
 # docker run -d --name backend --network expense backend:1.0.0
   backend:
-    image: backend:1.0.0
+    image: siya584/backend:1.0.0
     command: sh -c "sleep 50 && node /opt/backend/index.js"
     networks:
       - expense
@@ -18,7 +18,7 @@ services:
   
   # docker run -d --name mysql --network expense -v mysql:/var/lib/mysql backend:1.0.0
   mysql:
-    image: mysql:1.0.0
+    image: siya584/mysql:1.0.0
     networks:
       - expense
     container_name:  mysql
@@ -26,7 +26,7 @@ services:
       - mysql:/var/lib/mysql
 # docker run -d --name frontend --network expense -p 80:80 frontend:1.0.0
   frontend:
-    image: frontend:1.0.0
+    image: siya584/frontend:1.0.0
     networks:
       - expense
     container_name: frontend
